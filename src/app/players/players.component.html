@@ -1,0 +1,26 @@
+
+<h2>Players</h2>
+
+<div>
+  <label for="new-player">player name: </label>
+  <input id="new-player" #playerName />
+  <button type="button" class="add-button" (click)="add(playerName.value); playerName.value=''">
+    Add player
+  </button>
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <ul class="players">
+      <li *ngFor="let player of players">
+        <button [class.selected]="player === selectedPlayer" type="button" (click)="onSelect(player)">
+          <span class="name">{{player.name | titlecase}}</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-6">
+    <app-player-detail [player]="selectedPlayer"></app-player-detail>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div *ngIf="match">
+  <h2>{{match.id}}. match</h2>
+
+  <div><span>Player 1: </span>{{match.player1}}</div>
+  <div><span>Player 2: </span>{{match.player2}}</div>
+
+  <table>
+    <tr>
+      <th></th>
+      <th>Set 1</th>
+      <th>Set 2</th>
+      <th>Set 3</th>
+      <th>Set 4</th>
+      <th>Set 5</th>
+      
+    </tr>
+    <tr>
+      <td>{{match.player1}}</td>
+      <td>
+        <input id="match-point1a" [(ngModel)]="match.point1a" placeholder="0">
+      </td>
+      <td>
+        <input id="match-point2a" [(ngModel)]="match.point2a" placeholder="0">
+      </td>
+      <td>
+        <input id="match-point3a" [(ngModel)]="match.point3a" placeholder="0">
+      </td>
+      <td>
+        <input id="match-point4a" [(ngModel)]="match.point4a" placeholder="0">
+      </td>
+      <td>
+        <input id="match-point5a" [(ngModel)]="match.point5a" placeholder="0">
+      </td>
+    </tr>
+    <tr>
+      <td>{{match.player2}}</td>
+      <td>
+        <input id="match-point1b" [(ngModel)]="match.point1b" placeholder="0">
+      </td>
+      <td>
+        <input id="match-point2b" [(ngModel)]="match.point2b" placeholder="0">
+      </td>
+      <td>
+        <input id="match-point3b" [(ngModel)]="match.point3b" placeholder="0">
+      </td>
+      <td>
+        <input id="match-point4b" [(ngModel)]="match.point4b" placeholder="0">
+      </td>
+      <td>
+        <input id="match-point5b" [(ngModel)]="match.point5b" placeholder="0">
+      </td>
+    </tr>
+  </table>
+</div>

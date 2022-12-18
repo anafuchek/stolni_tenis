@@ -1,0 +1,25 @@
+<div class="content" role="main">
+  <h1>{{title}}</h1>
+
+  
+<app-players></app-players>
+
+<app-matches></app-matches>
+
+<hr>
+
+A form for importing new players<br>
+An overview of each player<br>
+A form for importing new matches (consisting of two players and ten fields for points won, like in
+the example above)<br>
+Data validation for each set:
+A player that wins a set must have a minimum of eleven points
+If a greater number of points is won, check if the difference is two or more<br>
+An overview of each individual match<br>
+A list of all matches played
+
+
+</div>
+
+
+<router-outlet></router-outlet>

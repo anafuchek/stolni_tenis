@@ -1,0 +1,11 @@
+<h2>My matches</h2>
+<ul class="matches">
+  <li *ngFor="let match of matches">
+    <button [class.selected]="match === selectedMatch" type="button" (click)="onSelect(match)">
+      <span class="badge">{{match.id}}</span>
+      <span class="name">. match</span>
+    </button>
+  </li>
+</ul>
+
+<app-match-detail [match]="selectedMatch"></app-match-detail>
